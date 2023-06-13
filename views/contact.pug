@@ -1,0 +1,43 @@
+extends base.pug
+block scripts
+  script(src="../static/script.js") ;
+
+block style 
+ style
+   include   ../static/stylenavbar.css
+   include   ../static/stylecontact.css
+
+block content 
+ section#contact 
+   div#about-you.part
+    H1 About you
+    form(action= "/contact", method= "post", class= "myForm")
+     div#cont
+      div#cont-lab
+       label(for="name" class="lab-class") Name:
+       label(for="phone" class="lab-class")  Phone:
+       label(for="email" class="lab-class") Email:
+       label(for="address" class="lab-class")  Address:
+       label(for="message" class="lab-class")  Message:
+      div#cont-tag
+       <input type="text"class= "myInput"   id="name" name="name" placeholder="Enter your name..">
+       <input type="phone" class= "myInput"  id="phone" name="phone" placeholder="Enter your Phone no..">
+       <input type="email" class= "myInput"  id="email" name="email" placeholder="Enter your email..">
+       <input type="textarea" class="myInput"  id="address" name="address" placeholder="Your adress..">
+       <input type="textarea" class="myInput"  id="message" name="message"  placeholder="write your message here" rows='20' cols='30'>
+     button(class="btn")
+      | submit 
+   div#container.part 
+    H1 Get in touch
+    h2 Location
+    p
+     b Address: 
+     span  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, minima? Dolorum officia 
+      | soluta repellat, blanditiis perferendis expedita fugit itaque facere sint maiores molestiae.
+    p 
+     b phone number :
+     span Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    p 
+     b Email :
+     span Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+    

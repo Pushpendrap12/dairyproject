@@ -1,0 +1,30 @@
+extends base.pug
+
+block style 
+ style 
+  include ../static/stylecontact.css
+  include ../static/stylenavbar.css
+
+block content 
+ section#register.part
+    H2 Register
+    form(action= "/register", method= "post", class= "myForm")
+     div#cont
+      div#cont-lab
+       label(for="name" class="lab-class") Name:
+       label(for="phone" class="lab-class")  Phone:
+       label(for="email" class="lab-class") Email:
+       label(for="address" class="lab-class")  Address:
+       label(for="password" class="lab-class") Password:
+      div#cont-tag
+       <input type="text"class= "myInput"   id="name" name="name" placeholder="Enter your name..">
+       <input type="phone" class= "myInput"  id="phone" name="phone" placeholder="Enter your Phone no..">
+       <input type="email" class= "myInput"  id="email" name="email" placeholder="Enter your email..">
+       <input type="textarea" class="myInput"  id="address" name="address" placeholder="Your adress..">
+       <input type="text"   class="myInput" id="password" name="password" placeholder="Enter password" >
+     button(class="btn")
+      | submit 
+    p Already have account?
+     a(href='/login')  Login
+block scripts 
+ script(src="../static/script.js")  

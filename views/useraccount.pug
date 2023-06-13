@@ -1,0 +1,47 @@
+extends base.pug
+
+block style 
+ style 
+  include ../static/stylenavbar.css
+  include ../static/styleuserdata.css
+
+block content 
+ -const data4 = JSON.parse(datas)
+ -const check = JSON.parse(check2)
+ -const name = check[0].name;
+ -const password = check[0].password;
+ section#useraccount 
+  div#previous.part 
+    h1 #{name}
+    h2
+    table 
+     thead 
+      tr
+       th Date 
+       th Quantity
+       th Fat 
+       th S.N.F
+     tbody 
+      each daydata in data4
+       tr
+        td= daydata.date
+        td= daydata.quantity 
+        td= daydata.fat 
+        td= daydata.snf 
+  #new.part 
+   h1  Add Today Data
+   form(action="/adddata" , method = 'post' , class="myform") 
+    input(type="text",name="name" , placeholder='Enter Name' , class="myInput",value=`${name}`,style='display:none')
+    input(type="password",name='password' , value=`${password}`, placeholder='Enter Password' , class="myInput",style='display:none')
+    input(type="text",name="quantity"  , class="myInput" ,placeholder='Enter quantity')
+    input(type="text",name="fat"  , class="myInput",placeholder="Enter fat")
+    input(type="text",name="snf"  , class="myInput",placeholder='Enter snf')
+    button(class = 'btn') 
+     |save data
+   form(action="/clear" , method = 'post' , class="myform") 
+    input(type="text",name="name" , placeholder='Enter Name' , class="myInput",value=`${name}`,style='display:none')
+    input(type="password",name='password' , value=`${password}`, placeholder='Enter Password' , class="myInput",style='display:none')
+    button(class = 'btn ' id ='cleardata') 
+     |clear all data
+block scripts 
+ script(src="../static/script.js")    ;   

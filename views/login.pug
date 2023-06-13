@@ -1,0 +1,25 @@
+extends base.pug
+
+block style 
+ style 
+  include ../static/stylelogin.css
+  include ../static/stylenavbar.css
+ style. 
+  #invalid-detail{
+    display: #{validation};
+    color:red;
+  }
+block content 
+  section#login 
+   h3 login
+   form(action="/login", method="post" , id="myForm") 
+    input(type="text",placeholder="Enter your name ", class = "myInput" , name="name")
+    input(type="password" , class="myInput" , placeholder="Enter your password", name="password")
+    button(class="btn")
+     |submit
+   p#register don't have account?
+    a#register1(href='/register')  Create account
+   p#invalid-detail  Invalid credential!  Please enter valid name and password
+  
+block scripts 
+ script(src="../static/script.js")  

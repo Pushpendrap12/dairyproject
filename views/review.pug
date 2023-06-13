@@ -1,0 +1,15 @@
+html 
+ head 
+  title MilkDairy
+  style 
+    include ../static/stylereview.css
+body 
+   
+   div#cont 
+     p(style="font-size:20px;color:green ;margin:30px 0px")  you enterd following detail:
+     p Name: #{name}
+     p Phone:#{phone}
+     p Adrress:#{address}
+     p Email:#{email}
+     <a href="/save" class="final">Register Now</a>
+     <a href="/contact" class="final" style="background-color:blue">Go Back </a>

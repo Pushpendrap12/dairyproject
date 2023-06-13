@@ -1,0 +1,16 @@
+#cont{
+    width: fit-content;
+    margin:auto;
+    
+}
+.final{
+    text-decoration: none;
+    
+    display: block;
+    margin: 30px auto;
+    font-size: 30px;
+    background-color: green;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+}

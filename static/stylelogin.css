@@ -1,0 +1,37 @@
+#login{
+    width: 28%;
+    margin: 28vh auto;
+}
+
+#login .btn{
+    width: 100%;
+    padding: 8px;
+    margin-top: 20px;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    
+}
+
+
+#login .myInput{
+    display: block;
+    width: 100%;
+    margin: 20px 0px;
+    padding: 8px 1;
+    outline: none;
+}
+
+#login #register{
+    margin: 19px 0px
+}
+#login #register1{
+    position: relative;
+    left: 148px;
+
+}
+
+#invalid-detail{
+    display:none;
+    color:red;
+}

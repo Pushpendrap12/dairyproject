@@ -1,0 +1,114 @@
+*{
+    margin : 0;
+    padding :0;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+#navbar{
+   position: sticky;
+    display:flex;
+   top:0px;
+   z-index: 2;
+    
+}
+#navbar::before{
+    content: "";
+    /* width: 100%; */
+    position: absolute;
+    height: 62px;
+    width: 100%;
+    background-color: blue;
+    z-index: -2;
+   /* opacity: 0.4;*/
+}
+#loginbar{
+    position: relative;
+    left: 133px;
+    padding: 10px 0px;
+}
+#loginbar a{
+    display: block;
+    background-color: white;
+    padding: 10px 10px;
+    border-radius: 15px;
+}
+#menu{
+    display: flex;
+   /* align-items: center;*/
+   /* border: 2px solid rgb(250, 242, 242);*/
+    margin: 0px auto;
+}
+
+#logo img{
+    height: 60px;
+    border-radius: 36px;
+}
+.nav-list{
+   /* padding: 30px;*/
+   text-align: center;
+   width: 150px;
+    margin:0px 20px;
+   /* border: 2px solid rgb(237, 230, 230);*/
+
+}
+.nav-menu{
+    display: none;
+    width: inherit;
+    transition-timing-function: calc(0.7s);
+    background-color: #60db60;
+    border: 0.2px solid #1cdb1c;
+
+}
+.nav-menu  li {
+    width: inherit;
+    border-top: 0.01px solid rgb(64 185 7);
+}
+.nav-menu  li a{
+    display: block;
+    width: inherit;
+    
+}
+
+.nav-list>a{
+    display: block;
+    padding: 20px 0px;
+    color: white;
+    font-size: 1.2rem;
+    
+
+}
+.nav-list>a:hover{
+    text-decoration: underline;
+}
+.nav-list ul li:hover{
+   
+    background-color: white;
+    color: #000;
+}
+.nav-list li a{
+    color: rgb(16, 2, 2);
+   font-size: 1.1rem;
+}
+
+#footer{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100vh;
+    text-align: center;
+    /*float: inline-end;*/
+    background-color: black;
+    color: white;
+}

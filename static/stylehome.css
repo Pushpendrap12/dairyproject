@@ -1,0 +1,38 @@
+#home{
+
+    content: "";
+    position: absolute;
+    top: 61px;
+    /*height: 92vh;*/
+    width: 100%;
+    height: 100vh;
+    transition-duration: 1s;
+    transition: ease-out;
+    z-index: 0;
+    text-align: center;
+}
+/* #home{
+    position: absolute;
+   background-color: transparent;
+    z-index: -2;
+} */
+
+.bg6{
+    background: center/cover no-repeat url("../static/images/bg6.avif") ;
+}
+
+.bg7{
+    background: center/cover no-repeat url("../static/images/bg7.avif") ;
+}
+ 
+#home h1{
+   padding-top: 50px;
+}
+
+#home p{
+    position: absolute;
+    bottom: 21vh;
+    color:red;
+    left: 28%;
+    font-size: 22px;
+}

@@ -1,0 +1,30 @@
+html
+  head
+    title My milk company
+    block style 
+  body
+   nav#navbar 
+     div#logo  
+      img(src="../static/images/logo.png", alt="HDA")    
+     ul#menu 
+      li.nav-list#nav-home #[a(href="/")  Home    ]
+      li.nav-list#nav-about.drop-down #[a(href="#") About Us ]
+       ul#nav-aboutu.nav-menu 
+        li.nav-aboutl #[a(href='#') Overview] 
+        li.navaboutl #[a(href='#')  Vison,Misson & Value]
+      li.nav-list#nav-services.drop-down #[a(href="#") Services ]
+       ul#nav-aboutu.nav-menu
+        li.nav-aboutl #[a(href='#') Share Contribution] 
+        li.navaboutl #[a(href='#')  Medical Services]
+      li.nav-list#nav-product.drop-down #[a(href="#") Products]
+       ul#nav-productu.nav-menu
+        li.nav-productl #[a(href='#') Ghee]
+        li.nav-productl #[a(href='#') Minral mixture]
+      li.nav-list#nav-contact #[a(href="/contact") Contact Us] 
+      li#loginbar  #[a(href='/login') login]
+
+                
+   block content
+   block scripts
+   footer#footer
+        | copyright  2019 belong  to hary      
